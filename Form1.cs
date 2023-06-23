@@ -215,27 +215,29 @@ namespace Calculator_some_original_name_
         {
 
         }
-
+        //прибавление числа на экране к числу, записанному в памяти
         private void operatorsClickMPlus(object sender, EventArgs e)
         {
             memory += Double.Parse(txtDisplay.Text);
+        /*      Пример: в памяти записано число 15, производим сложение 39 + 12 = 51,
+                нажимаем M+, калькулятор складывает 51 и 15 и записывает в память 66   */
         }
-
+        // вычитание числа на экране из числа, записанного в памяти
         private void operatorsClickMMinus(object sender, EventArgs e)
         {
             memory -= Double.Parse(txtDisplay.Text);
         }
-
+        //записывает в память число, которое на экране
         private void operatorsClickMS(object sender, EventArgs e)
         {
             memory = Double.Parse(txtDisplay.Text);
         }
-
+        //выводит число из памяти на экран
         private void operatorsClickMR(object sender, EventArgs e)
         {
             txtDisplay.Text = memory.ToString();
         }
-
+        //удаляет число из памяти
         private void operatorsClickMC(object sender, EventArgs e)
         {
             memory = 0;
